@@ -1,0 +1,57 @@
+PONIŻSZE ZADANIA POCHODZĄ Z WITRYNY SAMOUCZEKPROGRAMISTY.PL
+ORYGINAŁ MOŻESZ ZNALEŹĆ TUTAJ --> https://www.samouczekprogramisty.pl/zestaw-cwiczen-dla-poczatkujacych-programistow/
+W folderze prezentuję własne rozwiązania tych zadań.
+
+Metody w języku Java
+	1.Napisz metodę, która zwróci Twój aktualny wiek.
+	2.Napisz metodę, która zwróci Twoje imię,
+	3.Napisz metodę, która jako argument przyjmuje 2 liczby i wypisuje ich sumę, różnicę i iloczyn,
+	4.Napisz metodę, która jako argument przyjmuje liczbę i zwraca true jeśli liczba jest parzysta,
+	5.Napisz metodę, która jako argument przyjmuje liczbę i zwraca true jeśli liczba jest podzielna przez 3 i przez 5,
+	6.Napisz metodę, która jako argument przyjmuje liczbę i zwraca go podniesionego do 3 potęgi,
+	7.Napisz metodę, która jako argument przyjmuje liczbę i zwraca jej pierwiastek kwadratowy (poczytaj javadoc do klasy Math, znajdziesz tam metodę, która na pewno Ci pomoże),
+	8.Napisz metodę, która jako argument przyjmie trzy liczby. Metoda powinna zwrócić true jeśli z odcinków o długości przekazanych w argumentach można zbudować trójkąt prostokątny.
+
+Obiekty i pakietyPermalink
+	1.Utwórz klasę Human reprezentującą człowieka, musi posiadać atrybuty takie jak wiek, waga, wzrost, imię i płeć. Klasa powinna także zawierać metody getAge, getWeight, getHeight, 		getName, isMale.
+	2.Utwórz klasę reprezentującą prostokąt, musi posiadać atrybuty długość i szerokość. Klasa powinna posiadać metody obliczające pole, obwód i długość przekątnej.
+	3.Utwórz klasę o nazwie MyNumber, której jedyny konstruktor przyjmuje liczbę. Klasa powinna mieć następujące metody
+	MyNumber isOdd() – true jeśli atrybut jest nieparzysty,
+	MyNumber isEven() – true jeśli atrybut jest parzysty,
+	MyNumber sqrt() – pierwiastek z atrybutu,
+	MyNumber pow(MyNumber x) – atrybut podniesiony do potęgi x (przydatnej metody poszukaj w javadoc do klasy Math),
+	MyNumber add(MyNumber x) – zwraca sumę atrybutu i x opakowaną w klasę MyNumber,
+	MyNumber subtract(MyNumber x) – zwraca różnicę atrybutu i x opakowaną w klasę MyNumber.
+	
+Tablice
+	1.Napisz metodę, która zwróci tablicę String[] zawierającą pierwsze 5 liter alfabetu,
+	2.Napisz metodę pobierającą trójelementową tablicę liczb, która zwróci tablicę zawierającą te same elementy w odwróconej kolejności
+
+Pętle i instrukcje warunkowePermalink
+	1.Utwórz metodę pobierającą dodatnią liczbę całkowitą X, która wyświetli na ekranie liczby od zera do X,
+	2.Jeśli w zadaniu 1. użyłeś pętli for przerób tę metodę na while (lub odwrotnie),
+	3.Napisz klasę ArrayFactory, która w konstruktorze pobierze liczbę całkowitą X. Klasa powinna mieć 2 metody:
+	int[] oneDimension – zwróci instancję tablicy jednowymiarowej o długości X,
+	int[][] twoDimension – zwróci instację tablicy dwuwymiarowej gdzie liczba wierszy i liczba kolumn równa się X,
+	4.Utwórz metodę, która pobierze liczbę i wypisze każdy znak w osobnej linii zaczynając od ostatniej cyfry (np. dla liczby 123 będą to trzy linie z 3, 2 i 1),
+	5.Utwórz metodę, która jako argument pobierze obiekt klasy String i zwróci “odwrócony” argument. Na przykład “pies” przekształci w “seip”,
+	6.Utwórz metodę, która pobierze liczbę oraz zwróci ją w formie binarnej (2 => “10”, 4 => “100”, 5 => “101”, itd.). System binarny opisałem w osobnym artykule,
+	7.Utwórz metodę, pobierającą łańcuch znaków, która sprawdzi czy jest on palindromem. Np. “kajak” jest palindromem (to samo czytane “od przodu i od tyłu”) jednak “kotek” już nie. 	
+	8.Do klasy ArrayFactory dodaj metodę zwracającą macierz jednostkową (jedynki “na przekątnej”),
+	9.Napisz metodę, która pobierze tablicę liczb całkowitych i wyświetli ją w postaci “[liczba, liczba, liczba]”,
+	10.Napisz metodę, która pobierze tablicę liczb całkowitych i posortuje ją w kolejności od najmniejszej do największej liczby. Jednym z podstawowych algorytmów sortowania jest 	
+	sortowanie bąbelkowe.
+	
+Typy proste
+
+	1.Jeśli w klasie Human użyłeś typów prostych zamień je na odpowiadające im klasy (int => Integer),
+	2.Napisz program, który pobierze od użytkownika liczbę całkowitą, a następnie wyświetli jej binarną reprezentację na ekranie,
+	3.Napisz program, który pobierze od użytkownika liczbę całkowitą N reprezentującą długość tablicy, a następnie poprosi o N kolejnych liczb uzupełniając nimi wcześniej stworzoną 		tablicę. Wyświetl na konsoli tablicę posortowaną w kolejności od najmniejszej do największej liczby,
+	4.Napisz program, który pobierze od użytkownika łańcuch znaków i wyświetli na konsoli jego długość, informację czy jest to palindrom czy nie oraz jego odwróconą wartość.
+
+Interfejsy
+	Stwórz interfejs Figure. Interfejs powinien zawierać metody getPerimeter (zwracającą obwód) oraz getArea (zwracającą powierzchnię). Następnie utwórz klasy Circle, Triangle i 			Rectangle, niech każda z klas implementuje interfejs Figure. Napisz program, który pobierze od użytkownika:
+	-długość promienia koła,
+	-2 długości boków trójkąta prostokątnego (boki przy kącie prostym),
+	-długość boków prostokąta.
+	Utworzy instancje tych obiektów i umieści je w tablicy Figure[]. Następnie iterując po obiektach wyświetl pole oraz obwód aktualnego obiektu.
