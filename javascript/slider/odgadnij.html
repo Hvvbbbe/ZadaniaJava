@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pl">
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		
+		<script type="text/javascript">
+		
+			var numer = Math.floor(Math.random()*5)+1;
+			
+			var timer1 = 0;
+			var timer2 = 0;
+			
+			function ustawslajd(nrslajdu)
+			{
+				clearTimeout(timer1);
+				clearTimeout(timer2);
+				numer = nrslajdu - 1;
+				
+				schowaj();
+				setTimeout("zmienslajd()", 500);
+				
+			}
+			
+			function schowaj()
+			{
+				$("#slider").fadeOut(500);
+			}
+		
+			function zmienslajd()
+			{
+				numer++; if (numer>5) numer=1;
+				
+				var plik = "<img src=\"slajdy/slajd" + numer + ".png\" />";
+				
+				document.getElementById("slider").innerHTML = plik;
+				$("#slider").fadeIn(500);
+			
+			}
+			// podpoweidz
+				function sprawdz()
+		{
+			var tytuly=["Matrix Reaktywacja","Obcy kontra Predator","Ojciec Chrzestny","Django","Nietykalni"];
+			var tytul = document.getElementById("pole").value;
+			var sprawdzenie = false;
+			
+			for (i=0;i<5;i++)
+			{
+				if(tytul==tytuly[i] && i==numer-1) 
+				{
+					sprawdzenie = true;
+					break;
+				}
+				else sprawdzenie = false;
+				
+			}
+			if(sprawdzenie == true) document.getElementById("wynik").innerHTML='<span style="color: #4CAF50; ">Gratulacje! Podałeś prawidłowy tytuł!</span>';
+			else document.getElementById("wynik").innerHTML='<span style="color: #FF3333; ">Nieprawidłowy tytuł! Sprawdź pisownię!</span>';
+			
+		}
+		
+		</script>
+		
+	</head>
+	<body onload="zmienslajd()">
+	<div class="container">
+		<h1>Naciśnij wybrany numer by wybrać film:</h1>
+		<div class="blocks">
+		<div class="numbers" onclick="ustawslajd(1)" style="cursor:pointer;">1</div>
+		<div class="numbers" onclick="ustawslajd(2)" style="cursor:pointer;">2</div>
+		<div class="numbers" onclick="ustawslajd(3)" style="cursor:pointer;">3</div>
+		<div class="numbers" onclick="ustawslajd(4)" style="cursor:pointer;">4</div>
+		<div class="numbers" onclick="ustawslajd(5)" style="cursor:pointer;">5</div>
+		</div>
+		<div id="slider"></div>
+		<input type="text" id="pole" placeholder="Wpisz tytuł filmu"/>
+		<input type="submit" value="Sprawdź" onclick="sprawdz()" />
+		<div id="wynik"> </div>
+		<div id="przejscie"><a href="slider.html">Wróć do pokazu slajdów </a><div>
+	</div>	
+	</body>
+</html>
